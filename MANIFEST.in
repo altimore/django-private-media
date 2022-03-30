@@ -1,4 +1,0 @@
-include LICENSE
-include CHANGES
-include README.txt
-recursive-include docs *
