@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-private-media"
-version = "0.1.4"
+version = "0.1.5"
 description = "Private media for Django. Check the user's authorization before serving files at PRIVATE_MEDIA_URL, uploaded to PRIVATE_MEDIA_ROOT. Requires Django 1.5."
 license = "BSD License"
 keywords = ["private", "media", "xsendfile"]
