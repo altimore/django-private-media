@@ -1,13 +1,37 @@
 [tool.poetry]
 name = "django-private-media"
-version = "0.1.5"
+version = "0.1.6"
 description = "Private media for Django. Check the user's authorization before serving files at PRIVATE_MEDIA_URL, uploaded to PRIVATE_MEDIA_ROOT. Requires Django 1.5."
 license = "BSD License"
 keywords = ["private", "media", "xsendfile"]
-classifiers = ["Environment :: Web Environment", "Framework :: Django", "Intended Audience :: Developers", "License :: OSI Approved :: BSD License", "Operating System :: OS Independent", "Programming Language :: Python", "Programming Language :: Python :: 2.7", "Topic :: Internet :: WWW/HTTP", "Topic :: Internet :: WWW/HTTP :: Dynamic Content"]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 2.7",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
 homepage = "https://github.com/RacingTadpole/django-private-media"
 authors = ["Arthur Street <arthur@racingtadpole.com>"]
 readme = "README.txt"
 
 [tool.poetry.dependencies]
-python = "*"
+python = ">=3.10"
+django = "^5.1"
+mypy = "^1.11.2"
+django-stubs = "^5.0.4"
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^3.29.0"
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "pep440"
+version_provider = "poetry"
+update_changelog_on_bump = true
