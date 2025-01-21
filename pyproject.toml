@@ -20,7 +20,6 @@ authors = ["Arthur Street <arthur@racingtadpole.com>"]
 readme = "README.txt"
 packages = [
     { include = "private_media" },
-    # { include = "extra_package/**/*.py" },
 ]
 
 [tool.poetry.dependencies]
