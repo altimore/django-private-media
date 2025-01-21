@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "django-private-media"
+name = "django-private-media"  # Changed from private_media to django-private-media
 version = "0.1.6"
 description = "Private media for Django. Check the user's authorization before serving files at PRIVATE_MEDIA_URL, uploaded to PRIVATE_MEDIA_ROOT. Requires Django 1.5."
 license = "BSD License"
@@ -18,16 +18,19 @@ classifiers = [
 homepage = "https://github.com/RacingTadpole/django-private-media"
 authors = ["Arthur Street <arthur@racingtadpole.com>"]
 readme = "README.txt"
+packages = [
+    { include = "private_media" },
+    # { include = "extra_package/**/*.py" },
+]
 
 [tool.poetry.dependencies]
 python = ">=3.10"
 django = "^5.1"
-mypy = "^1.11.2"
-django-stubs = "^5.0.4"
 
 [tool.poetry.group.dev.dependencies]
 commitizen = "^3.29.0"
-
+mypy = "^1.11.2"
+django-stubs = "^5.0.4"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
