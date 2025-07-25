@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "django-private-media"  # Changed from private_media to django-private-media
+name = "django-private-media"
 version = "0.1.7"
 description = "Private media for Django. Check the user's authorization before serving files at PRIVATE_MEDIA_URL, uploaded to PRIVATE_MEDIA_ROOT. Requires Django 1.5."
 license = "BSD License"
@@ -11,16 +11,24 @@ classifiers = [
     "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11", 
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
-homepage = "https://github.com/RacingTadpole/django-private-media"
-authors = ["Arthur Street <arthur@racingtadpole.com>"]
+homepage = "https://github.com/altimore/django-private-media"
+repository = "https://github.com/altimore/django-private-media"
+authors = ["Arthur Street <arthur@racingtadpole.com>", "Thomas Couderette <thomas.couderette@sodibur.com>"]
 readme = "README.txt"
 packages = [
     { include = "private_media" },
 ]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.dependencies]
 python = ">=3.10"
