@@ -123,4 +123,40 @@ And then provide a permissioning class like this (which lets staff and the owner
 
 Detailed documentation is provided at `<http://racingtadpole.com/blog/private-media-with-django>`_ and in the "docs" directory (pending).
 
+## Installation avec Poetry
+
+Pour éviter les réinstallations systématiques et les warnings, il est recommandé d'utiliser une référence de tag spécifique plutôt qu'une branche :
+
+### Méthode recommandée (avec tag) :
+```toml
+[tool.poetry.dependencies]
+django-private-media = { git = "https://github.com/altimore/django-private-media.git", tag = "v0.1.7" }
+```
+
+### Alternative (avec révision spécifique) :
+```toml
+[tool.poetry.dependencies]
+django-private-media = { git = "https://github.com/altimore/django-private-media.git", rev = "0d7ae5a" }
+```
+
+### À éviter (cause des réinstallations) :
+```toml
+[tool.poetry.dependencies]
+django-private-media = { git = "https://github.com/altimore/django-private-media.git" }
+```
+
+## Résolution des problèmes
+
+Si vous rencontrez encore des problèmes :
+
+1. Supprimez le cache de Poetry : `poetry cache clear pypi --all`
+2. Supprimez le lock file : `rm poetry.lock`
+3. Réinstallez : `poetry install`
+
+## Versions
+
+- 0.1.7 : Correction des problèmes d'installation Poetry, amélioration des métadonnées
+- 0.1.6 : Compatibilité Django 4.1.6
+- 0.1.5 : Corrections diverses
+
 
